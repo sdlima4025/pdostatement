@@ -32,4 +32,12 @@ private $db;
                 $sql->bindValue(":senha", md5($senha));
                 $sql->execute();
         }
+
+        // update de dados no DB com PDO 
+        public function atualizar($nome, $email, $senha, $id) {
+
+            $sql = $this->db->prepare("UPDATE usuarios SET nome = ?, email = ?, senha = ? 
+            WHERE id = ?");
+            $sql->execute(array($nome, $email, md5($senha), $id));
+        }
 }

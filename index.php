@@ -8,4 +8,7 @@ $u = new Usuarios();
 // print_r($res);
 
 // Inserir
-$u->inserir("Reinaldo Lima", "balman@gmail.com.br", "123");
+// $u->inserir("Reinaldo Lima", "balman@gmail.com.br", "123");
+
+// UPDATE COM EXECUTE
+$u->atualizar("Sérgio Santana", "santana@gmail.com.br", "123", 2);
