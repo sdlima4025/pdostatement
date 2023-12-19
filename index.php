@@ -2,6 +2,10 @@
 require 'usuarios.php';
 
 $u = new Usuarios();
-$res = $u->selecionar(2);
+// selecionar
+// $res = $u->selecionar(2);
 
-print_r($res);
+// print_r($res);
+
+// Inserir
+$u->inserir("Reinaldo Lima", "balman@gmail.com.br", "123");

@@ -25,6 +25,11 @@ private $db;
 
         // Selecionando dados no DB com PDO
         public function inserir($nome, $email, $senha) {
-            $sql = $this->db->prepare("INSERT INTO usuarios SET nome = :nome ")
+            $sql = $this->db->prepare("INSERT INTO usuarios 
+            SET nome = :nome, email = :email, senha = :senha ");
+                $sql->bindParam(":nome", $nome);
+                $sql->bindParam(":email", $email);
+                $sql->bindValue(":senha", md5($senha));
+                $sql->execute();
         }
 }
