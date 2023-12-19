@@ -40,4 +40,11 @@ private $db;
             WHERE id = ?");
             $sql->execute(array($nome, $email, md5($senha), $id));
         }
+
+        // DELETAR COM PDO bindvalue
+        public function excluir($id) {
+            $sql = $this->db->prepare("DELETE FROM usuarios WHERE id = ?");
+            $sql->bindValue(1, $id);
+            $sql->execute();
+        }
 }

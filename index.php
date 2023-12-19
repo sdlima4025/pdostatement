@@ -11,4 +11,7 @@ $u = new Usuarios();
 // $u->inserir("Reinaldo Lima", "balman@gmail.com.br", "123");
 
 // UPDATE COM EXECUTE
-$u->atualizar("Sérgio Santana", "santana@gmail.com.br", "123", 2);
+// $u->atualizar("Sérgio Santana", "santana@gmail.com.br", "123", 2);
+
+// DELETE PDO bindValue
+// $u->excluir(2);
